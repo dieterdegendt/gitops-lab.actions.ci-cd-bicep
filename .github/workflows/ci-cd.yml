@@ -62,7 +62,7 @@ jobs:
     environment: development
     needs: [ RG-Job ]
     env: 
-      AZURE-WEBAPP-NAME: <<REPLACE>>-mywebapp-dev
+      AZURE-WEBAPP-NAME: azuremaster-mywebapp-dev
     steps:
       - name: Download Templates
         uses: actions/download-artifact@v3
@@ -98,7 +98,7 @@ jobs:
     environment: production
     needs: [ Dev-Job ]
     env: 
-      AZURE-WEBAPP-NAME: <<REPLACE>>-mywebapp-prod
+      AZURE-WEBAPP-NAME: azuremaster-mywebapp-prod
     steps:
       - name: Download Templates
         uses: actions/download-artifact@v3
